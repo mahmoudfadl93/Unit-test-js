@@ -4,13 +4,13 @@
   "description": "for learn unit test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mahmoudfadl93/Unit-test-js.git"
   },
-  "author": "",
+  "author": "Mahmoud fadl",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mahmoudfadl93/Unit-test-js/issues"
@@ -18,5 +18,19 @@
   "homepage": "https://github.com/mahmoudfadl93/Unit-test-js#readme",
   "devDependencies": {
     "jest": "^27.0.6"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ],
+    "coverageDirectory": "reports",
+    "collcetCoverageFrom": [
+      "**/*.{js,jsx,ts}"
+    ],
+    "coveragePathIngorePatterns": [
+      "/node_modules/",
+      "/build/"
+    ]
   }
 }
